@@ -1,0 +1,107 @@
+h1 {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+#game-board {
+    width: 80rem;
+    height: 45rem;
+    border: 5px solid black;
+    /* border-radius: 10%; */
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Game board header */
+div#game-header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 5rem;
+    background-color: rgba(0, 255, 255, 0.565);
+    
+}
+
+#highscore-text, 
+#distance-text {
+    position: absolute;
+}
+
+#highscore-text {
+    font-size: 1.7rem;
+    left: 50px;
+}
+
+#distance-text {
+    font-size: 1.7rem;
+    left: 550px;
+}
+
+#btn-pause img {
+    position: absolute;
+    width: 3.5rem;
+    right: 90px;
+    top: 10px;
+}
+
+#btn-pause img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#btn-help img {
+    position: absolute;
+    width: 3.5rem;
+    right: 15px;
+    top: 10px;
+}
+
+#btn-help img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* end of game board header */
+
+/* Splash screen styles */
+#splash-screen {
+    width: 60rem;
+    height: 30rem;
+    margin: 2rem auto;
+    border: 3px solid black;
+    border-radius: 15px;
+    align-content: center;
+    background-color: rgb(152, 159, 159);
+}
+
+#splash-screen h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#splash-text {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 1rem;
+}
+
+#splash-screen form {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+input[type=text] {
+    border: 2px solid red;
+    border-radius: 15px;
+    font-size: 2rem;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+input[type=submit] {
+    font-size: 2rem;
+    color: black;
+    border-radius: 15px;
+}
+
+/* End of splash screen styles */

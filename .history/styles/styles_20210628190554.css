@@ -1,0 +1,48 @@
+h1 {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+#game-board {
+    width: 80rem;
+    height: 45rem;
+    border: 5px solid black;
+    /* border-radius: 10%; */
+    margin: 0 auto;
+    position: relative;
+}
+
+#game-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+}
+
+#highscore-text, 
+#distance-text {
+    position: absolute;
+}
+
+#highscore-text {
+    font-size: 1.7rem;
+    left: 50px;
+}
+
+#distance-text {
+    font-size: 1.7rem;
+    left: 550px;
+}
+
+#btn-pause img {
+    position: absolute;
+    width: 3.5rem;
+    right: 90px;
+    top: 10px;
+}
+
+#btn-help img {
+    position: absolute;
+    width: 3.5rem;
+    right: 15px;
+    top: 10px;
+}

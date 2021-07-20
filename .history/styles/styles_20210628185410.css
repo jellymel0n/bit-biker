@@ -1,0 +1,14 @@
+#game-board {
+    width: 80rem;
+    border: 2px solid black;
+    border-radius: 5%;
+    margin: 0 auto;
+}
+
+#btn-pause img {
+    width: 5rem;
+}
+
+#btn-help img {
+    width: 5rem;
+}

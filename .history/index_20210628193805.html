@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS reset/normalize -->
+    <link rel="stylesheet" href="styles/normalize-fwd.css">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>.Run | Javascript Game</title>
+</head>
+<body>
+    <h1>.Run | Javascript Game</h1>
+    <main id="game-board">
+        <!-- Game board header -->
+        <div id='game-header'>
+            <p id='highscore-text'>Highscore: </p>
+            <p id='distance-text'>Distance: </p>
+            <div id='btn-pause'>
+                <img src="assets/graphics/icons/pause.png" alt="pause button, circle around a pause icon">
+            </div>
+            <div id='btn-help'>
+                <img src="assets/graphics/icons/information.png" alt="help button, circle around a question mark">
+            </div>
+        </div>
+        <!-- End of game board header -->
+
+        <!-- Splash screen - intro -->
+        <div id='splash-screen'>
+            <h2 id='splash-header'>Welcome to .Run!</h2>
+            <p id='splash-text'>Press spacebar or up-arrow to jump over pits and obstacles. Watch out for birds!</p>
+            <form action="">
+                <input type="text" id="player-name" name="player-name" placeholder="Enter Player Name"><br>
+                <input type="submit">
+            </form> 
+            <form action="/action_page.php">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <input type="submit" value="Submit">
+              </form>
+        </div>
+
+    </main>
+
+<!-- jQuery CDN script-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- Local JS script -->
+<script src='scripts/script.js'></script>
+</body>
+</html>

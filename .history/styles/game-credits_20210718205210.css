@@ -1,0 +1,90 @@
+/* -----------Credits - credits.html------------ */
+
+/* Typography
+--------------------------------------------- */
+
+h1.credits-title,
+.credits-main section {
+    color: rgb(249, 241, 241);
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+h2 {
+   font-family: 'Orbitron', sans-serif;
+   letter-spacing: 5px;
+   text-align: center;
+   margin-bottom: 0;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.credits-main section a {
+    font-family: "Open Sans", sans-serif;
+    color: rgb(249, 241, 241);
+    text-decoration: none;
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+section.home-credits,
+section.culture-credits,
+section.destinations-credits {
+    margin-bottom: 3rem;
+}
+
+
+@media (min-width: 50em) {
+    h1.credits-title {
+        font-size: 3rem;
+    }
+
+    h2.credits-section-title {
+        text-align: center;
+    }
+
+    .credits-main section a {
+        text-align: center;
+    }
+}
+
+
+/* Elements
+--------------------------------------------- */
+
+
+
+
+/* Links
+--------------------------------------------- */
+.credits-footer a {
+    color: rgb(249, 241, 241);
+}
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+/* Main content */
+
+
+
+.credits-body {
+    background-color: #3a3a3a;
+}
+
+hr.credits-row {
+    margin: 0.5rem auto 0 auto;
+    border: 1px solid rgb(249, 241, 241);
+    width: 9rem;
+}

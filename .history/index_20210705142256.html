@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS reset/normalize -->
+    <link rel="stylesheet" href="styles/normalize-fwd.css">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Bit Biker | Javascript Game</title>
+</head>
+<body>
+    <h1>Bit Biker | Javascript Game</h1>
+    
+    <main id="game-board">
+        <div id="song">
+            <audio id='song-playback' currentTime=''>
+                <source src="assets/music/run-song.mp3" type="audio/mp3" />
+                Your browser does not support audio playback
+            </audio>
+        </div>
+        <!-- Game board header -->
+        <div id='game-header'>
+            <p id='highscore-text'>Highscore: </p>
+            <p id='distance-text'>Distance: </p>
+            <div id='btn-pause'>
+                <img src="assets/graphics/icons/pause.png" alt="pause button, circle around a pause icon">
+            </div>
+            <div id='btn-volume'>
+                <img src="assets/graphics/icons/volume.png" alt="volume button, speaker icon">
+            </div>
+            <div id="btn-mute">
+                <img src='assets/graphics/icons/mute.png' alt='mute button, speaker icon crossed out'>
+            </div>
+        </div>
+        <!-- End of game board header -->
+
+        <!-- Splash screen - intro -->
+        <div id='splash-screen'>
+            <h2 id='splash-header'>Welcome to .Run!</h2>
+            <p id='splash-text'>Press spacebar or up-arrow to jump over pits and obstacles.<br><br>Watch out for birds!</p>
+
+            <div id="splashInput">
+                <input id='player-name' type='text' placeholder='Enter Player Name'>
+                <button id='savePlayer'>Start!</button>
+            </div>
+        </div>
+        <!-- End of splash screen -->
+
+        <!-- Pause Screen -->
+        <div id="pause-screen">
+            <h2>Game Paused</h2>
+            <p id='pause-text'>
+                To get gameplay instructions click the "Help" button<br>
+                To quit the game and go back to the splash screen click "Quit".<br>
+                To go back to the game, click "X" in the top corner.</p>
+            <div id="pause-close">
+                <img src="assets/graphics/icons/remove.png" alt="Close icon, an X with a circle around it.">
+            </div>
+            <div id="pause-btns">
+                <div id="help-btn">
+                    <p id="help-btn-text">Help</p>
+                </div>
+                <div id="quit-btn">
+                    <p id="quit-text">Quit</p>
+                </div>
+            </div>
+        </div>
+        <!-- End of Pause Screen -->
+
+        <!-- Help Screen -->
+        <div id="help-screen">
+            <h2>Gameplay Instructions</h2>
+            <p id='help-text'>
+                Press the spacebar or up arrow to jump, hold to jump higher.<br>
+                Avoid obstacles in the road as well as birds flying above.<br>
+                Have fun!
+            </p>
+            <div id="help-btns">
+                <div id="resume-btn">
+                    <p>Resume</p>
+                </div>
+                <div id="help-quit-btn">
+                    <p id="quit-text">Quit</p>
+                </div>
+            </div>
+        </div>
+        <!-- End of Help Screen -->
+        
+    </main>
+
+<!-- jQuery CDN script-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- Local JS script -->
+<script src='scripts/script.js'></script>
+</body>
+</html>

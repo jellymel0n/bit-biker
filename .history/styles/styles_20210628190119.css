@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+#game-board {
+    width: 80rem;
+    height: 45rem;
+    border: 2px solid black;
+    border-radius: 5%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#game-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+#highscore-text, 
+#distance-text {
+    position: absolute;
+}
+
+#highscore-text {
+    font-size: 3rem;
+    left: 50px;
+}
+
+#btn-pause img {
+    width: 3.5rem;
+}
+
+#btn-help img {
+    width: 3.5rem;
+}

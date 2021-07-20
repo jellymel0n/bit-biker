@@ -1,0 +1,280 @@
+body { 
+    background-color: rgb(40, 40, 40);
+    z-index: -2;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: azure;
+    text-align: center;
+    margin: 2rem auto;
+    letter-spacing: 5px;
+}
+
+#game-board {
+    width: 80rem;
+    height: 725px;
+    border: 5px solid black;
+    /* border-radius: 10%; */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#game-board:before {
+    content: " ";
+    position: absolute;
+    z-index: -2;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 20px solid white;
+    border-radius: 18px;
+}
+
+/* Game board header */
+div#game-header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 5rem;
+    background-color: rgba(1, 255, 255, 0.297);
+    background-color: rgba(74, 74, 74, 0.366);
+    border-bottom: 1px solid black;
+}
+
+#highscore-text, 
+#distance-text,
+#distance-num,
+#highScore-get {
+    position: absolute;
+}
+
+#highscore-text {
+    font-size: 1.7rem;
+    left: 50px;
+    font-weight: bold;
+}
+
+#distance-text {
+    font-size: 1.7rem;
+    left: 550px;
+    font-weight: bold;
+}
+
+#distance-num {
+    font-size: 1.7rem;
+    left: 660px;
+    top: 1px;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+#highScore-get {
+    font-size: 1.7rem;
+    left: 178px;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+
+
+#btn-pause img {
+    position: absolute;
+    width: 3.5rem;
+    right: 90px;
+    top: 10px;
+}
+
+#btn-pause img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#btn-volume img,
+#btn-mute img {
+    position: absolute;
+    width: 3.5rem;
+    right: 15px;
+    top: 10px;
+}
+
+#btn-volume img:hover,
+#btn-mute img:hover  {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#btn-mute {
+    display: none;
+}
+
+/* end of game board header */
+
+/* Splash screen styles */
+#splash-screen {
+    width: 60rem;
+    height: 30rem;
+    z-index: 5;
+    margin: 2rem auto;
+    border: 3px solid black;
+    border-radius: 15px;
+    align-content: center;
+    background-color: rgb(152, 159, 159);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#splash-screen h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#splash-text {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 1rem;
+}
+
+#splashInput {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+input[type=text] {
+    border: 4px solid black;
+    border-radius: 15px;
+    font-size: 2rem;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+button#savePlayer {
+    font-size: 2rem;
+    color: black;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+button#savePlayer:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* End of splash screen styles */
+
+/* Pause and Help screen styles */
+
+#pause-screen, 
+#help-screen,
+#gOver-screen,
+#complete-screen {
+    display: none;
+    position: relative;
+    z-index: 3;
+    width: 60rem;
+    height: 30rem;
+    margin: 2rem auto;
+    border: 3px solid black;
+    border-radius: 15px;
+    align-content: center;
+    background-color: rgb(152, 159, 159);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#pause-screen h2,
+#help-screen h2,
+#gOver-screen h2,
+#complete-screen h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#pause-text,
+#help-text,
+#gOver-text,
+#gOver-distance,
+#highscoreCheck,
+#complete-text,
+#complete-distance,
+#completeHSCheck {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 1rem;
+}
+
+#pause-close img {
+    position: absolute;
+    width: 3.5rem;
+    left: 15px;
+    top: 15px;
+}
+
+#pause-close img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#pause-btns,
+#help-btns,
+#gOver-btns,
+#complete-btns{
+    display: flex;
+    justify-content:center;
+    margin-top: 3.6rem;
+}
+
+#help-btn,
+#quit-btn,
+#resume-btn,
+#help-quit-btn,
+#play-again-btn,
+#gOver-quit-btn,
+#complete-play-again-btn,
+#complete-quit-btn {
+    border: solid 3px black;
+    text-align: center;
+    width: 17%;
+    border-radius: 10px;
+    /* height: 4rem; */
+    font-size: 2rem;
+    vertical-align: middle;
+    font-weight: bold;
+    margin: 0 3rem 0 3rem;
+}
+
+#help-btn:hover,
+#quit-btn:hover,
+#resume-btn:hover,
+#help-quit-btn:hover,
+#play-again-btn:hover,
+#gOver-quit-btn:hover,
+#complete-quit-btn:hover,
+#complete-play-again-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: black;
+    color: azure;
+}
+
+/* End of Screen Styles */
+
+/* Game Objects */
+.player {
+    position: absolute;
+    background-size: contain; 
+    transform-origin: center center;
+}
+  
+.obstacle {
+    position: absolute;
+    background-size: contain;
+}
+  
+.bg-layer {
+    position: absolute;
+}
+  
+.bg-prop {
+    position: absolute;
+    background-size: contain;
+}

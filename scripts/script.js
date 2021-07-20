@@ -487,8 +487,8 @@ class Obstacle {
         let playPos = {x: gamePlayer.currentPosition[0], y: gamePlayer.currentPosition[1], width: gamePlayer.dimensions[0], height: gamePlayer.dimensions[1]};
 
         if (obst.x < playPos.x + playPos.width && obst.x + obst.width > playPos.x && obst.y < playPos.y + playPos.height && obst.y + obst.height > playPos.y) {
-            // game.gameOver();
-            console.log('game-over');
+            game.gameOver();
+            // console.log('game-over');
         }
     }
 }
@@ -589,7 +589,7 @@ class Player {
         classes = 'player',
         backgroundImage = "",
         jumpMax = 190,
-        currentPosition = [0, 0]
+        currentPosition = [0, 0],
     ) {
         this.dimensions = dimensions;
         this.position = position;
@@ -600,22 +600,23 @@ class Player {
         this.currentJump = 0;
         this.jumpMax = jumpMax;
         this.isJumping = false;
+        this.inTheAir = false;
     }
     updatePosition(elapsedTimeMS = 500) { // jump method
-        if(game.pressedKeys[0] === 32 || game.pressedKeys[0] === 38) {
+        if(game.pressedKeys[0] === 32 && this.inTheAir === false || game.pressedKeys[0] === 38 && this.inTheAir === false) {
             if(this.currentJump < this.jumpMax) {
                 this.currentJump += 10;
-                this.position[1] -= 0.0010;
+                this.position[1] -= 25;
                 this.$dom.css('transform', 'rotate(-45deg)');
                 this.isJumping = true;
             }
         } else if (this.currentJump > 0) {
             this.isJumping = true;
+            this.inTheAir = true;
             this.position[1] = this.currentJump * 0.3;
             this.currentJump = 0;
             this.jumpMax = 150;
             this.$dom.css('transform', 'rotate(0deg)');
-
             this.position[1] = 520;
         }
         if (this.currentJump >= this.jumpMax){
@@ -627,6 +628,7 @@ class Player {
         let newTop = currentPosition.top + (this.velocity / 1000) * elapsedTimeMS;
         if (newTop > this.position[1]) {
             this.isJumping = false;
+            this.inTheAir = false;
             this.velocity = 0;
             newTop = game.players[0].position[1];
         }

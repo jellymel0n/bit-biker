@@ -401,7 +401,7 @@ const game = {
         const bird = new Obstacle(
             [1280, 80],
             [70, 50],
-            oVelocity + 400,
+            oVelocity + 520,
             undefined,
             "assets/graphics/obstacles/bird.png"
         );
@@ -487,8 +487,8 @@ class Obstacle {
         let playPos = {x: gamePlayer.currentPosition[0], y: gamePlayer.currentPosition[1], width: gamePlayer.dimensions[0], height: gamePlayer.dimensions[1]};
 
         if (obst.x < playPos.x + playPos.width && obst.x + obst.width > playPos.x && obst.y < playPos.y + playPos.height && obst.y + obst.height > playPos.y) {
-            game.gameOver();
-            // console.log('game-over');
+            // game.gameOver();
+            console.log('game-over');
         }
     }
 }
@@ -509,19 +509,21 @@ class BGLayer {
         this.backgroundImage = backgroundImage;
     }
     updatePosition(elapsedTimeMS = 1000) {
-        if (game.gameLevel === 1) {
+        if (game.gameLevel === 0) {
             this.velocity = -50;
-        } else if (game.gameLevel === 2) {
+        } else if (game.gameLevel === 1) {
             this.velocity = -100;
+        } else if (game.gameLevel === 2){
+            this.velocity = -150;
         } else if (game.gameLevel === 3){
-            this.velocity = -150;
+            this.velocity = -190;
         } else if (game.gameLevel === 4){
-            this.velocity = -210;
-        } else if (game.gameLevel === 5){
             this.velocity = -150;
-        } else if (game.gameLevel === 6){
+        } else if (game.gameLevel === 5){
             this.velocity = -100;
-        } else if (game.gameLevel === 7){
+        } else if (game.gameLevel === 6){
+            this.velocity = -75;
+        } else if (game.gameLevel === 7) {
             this.velocity = -50;
         }
 
@@ -549,19 +551,21 @@ class BGProp {
         this.backgroundImage = backgroundImage;
     }
     updatePosition(elapsedTimeMS = 1000) {
-        if (game.gameLevel === 1) {
+        if (game.gameLevel === 0) {
             this.velocity = -125;
-        } else if (game.gameLevel === 2) {
+        } else if (game.gameLevel === 1) {
             this.velocity = -150;
+        } else if (game.gameLevel === 2){
+            this.velocity = -175;
         } else if (game.gameLevel === 3){
-            this.velocity = -175;
+            this.velocity = -200;
         } else if (game.gameLevel === 4){
-            this.velocity = -210;
-        } else if (game.gameLevel === 5){
             this.velocity = -175;
-        } else if (game.gameLevel === 6){
+        } else if (game.gameLevel === 5){
             this.velocity = -150;
-        } else if (game.gameLevel === 7){
+        } else if (game.gameLevel === 6){
+            this.velocity = -120;
+        } else if (game.gameLevel === 7) {
             this.velocity = -100;
         }
         const leftPosition = this.$dom.css("left");
